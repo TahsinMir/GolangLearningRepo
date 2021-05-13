@@ -100,6 +100,82 @@ func main() {
 	fmt.Println(y2)
 	fmt.Println(e2)
 
+	// constants
+	const myConst int = 5
+	fmt.Println(myConst)
+
+	// enumaration
+	type Grade int
+	const (
+		AA Grade = iota
+		BB
+		CC
+		DD
+		FF
+	)
+
+	var someGrade Grade = BB
+
+	fmt.Println(someGrade)
+
+	// if statement
+	var ifStatementVar int = 5
+	if ifStatementVar == 5 {
+		fmt.Println(" it is 5")
+	} else {
+		fmt.Println("it is not 5")
+	}
+
+	// for loop
+	for i := 0; i < 5; i++ {
+		fmt.Println("loop is working")
+	}
+
+	var i int = 0
+	for i < 10 {
+		fmt.Println(i)
+		i++
+	}
+
+	/*for {
+		fmt.Println("hi")
+	}*/
+
+	// switch case
+	var someOtherGrade Grade = CC
+	// automatically breaks without a "break" statement
+	switch someOtherGrade {
+	case AA:
+		fmt.Println("it is A")
+	case BB:
+		fmt.Println("it is B")
+	case CC:
+		fmt.Println("it is C")
+	default:
+		fmt.Println("default")
+
+	}
+
+	// tagless switch
+	// have conditions
+	switch {
+	case someOtherGrade == AA:
+		fmt.Println("it is A")
+	case someOtherGrade == BB:
+		fmt.Println("it is B")
+	case someOtherGrade == CC:
+		fmt.Println("it is C")
+	default:
+		fmt.Println("default")
+
+	}
+
+	// scanning user input
+	var number int
+	fmt.Println("enter a number...")
+	fmt.Scan(&number)
+	fmt.Println("you entered: ", number)
+
 }
 
 func someFunc() {
